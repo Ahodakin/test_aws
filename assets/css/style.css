@@ -1,0 +1,364 @@
+
+/*  typography */
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&display=swap");
+body {
+  line-height: 1.7;
+  font-family: "Nunito Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: #555;
+  font-size: 15px;
+}
+
+p {
+  font-weight: 400;
+  color: #555;
+  font-size: 15px;
+  line-height: 1.7;
+  font-family: "Nunito Sans", sans-serif;
+  margin-bottom: 1rem;
+}
+
+table{
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid black;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+h1{
+  color: #333;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+h1, .h1 {
+  font-size: 52px;
+}
+.swoh{
+    width: 50%;
+    box-shadow: 10px 5px 5px #Ce0033;
+}
+.login{
+  color:  #2563eb;
+}
+
+@media (max-width: 1023px) {
+  h1, .h1 {
+    font-size: 42px;
+  }
+}
+
+/* Button style */
+.btn {
+  font-size: 14px;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 10px 22px;
+  border-radius: 50px;
+  border: 1px solid;
+  position: relative;
+  z-index: 1;
+  transition: 0.2s ease;
+  display: inline-block;
+}
+
+.btn-primary {
+  background: #Ce0033;
+  color: #fff !important;
+  border-color: #Ce0033;
+}
+
+.section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.section-sm {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.section-title {
+  position: relative;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  letter-spacing: 0.06em;
+}
+.section-title::before {
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  content: "";
+  height: 2px;
+  width: 60px;
+  background-color: #4FD675;
+}
+
+
+/* badge */
+.badge {
+  border-radius: 0;
+  position: absolute;
+  width: 150px;
+  transform: rotate(45deg);
+  right: -45px;
+  top: 20px;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #fff;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+.badge-primary {
+  background-color: #4FD675;
+}
+
+
+.container {
+  padding: 0 15px;
+}
+@media (max-width: 1023px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+
+.section {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+
+.navigation {
+  border-bottom: 1px solid #EBEBEB;
+  transition: 0.2s ease;
+  padding: 5px 0 !important;
+  background-color: transparent;
+}
+.navigation.nav-bg {
+  background-color: #fff;
+}
+@media (max-width: 1023px) {
+  .navigation {
+    background-color: #fff;
+  }
+}
+
+.navbar-item img {
+  max-height: initial;
+}
+
+.navbar-item {
+  margin: 0;
+  padding: 0.4rem 0 !important;
+}
+.navbar-item .navbar-link {
+  text-transform: capitalize;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 600;
+}
+
+.navbar-link:not(.is-arrowless) {
+  padding-right: 2em !important;
+}
+
+.navbar-link {
+  color: #333;
+}
+.navbar-link:focus, .navbar-link:hover {
+  color: #Ce0033 !important;
+  background-color: transparent;
+}
+.navbar-link:focus::after, .navbar-link:hover::after {
+  border-color: #4FD675 !important;
+}
+
+.navbar-link:not(.is-arrowless)::after {
+  margin-top: -0.375em;
+  right: 0.7em;
+  border: 2px solid #333;
+  border-top: 0;
+  border-right: 0;
+}
+
+.navbar .navbar-link {
+  padding: 20px;
+}
+@media (max-width: 1023px) {
+  .navbar .navbar-link {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .navbar-start,
+.navbar-end {
+    max-width: 300px;
+    padding: 0 10px;
+    margin-left: auto !important;
+    margin-right: auto;
+  }
+  .navbar-end {
+    margin-bottom: 15px;
+  }
+  .navbar-end select {
+    width: calc(100% - 15px);
+    margin: 10px 0 20px 8px !important;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  .navbar-menu {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.95);
+    transition: all 0.2s ease-in-out;
+    position: absolute;
+    width: calc(100% - 30px);
+    left: 15px;
+  }
+  .navbar-menu.is-active {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+  }
+  .navbar-item {
+    padding: 0 !important;
+  }
+}
+.navbar-item.has-dropdown .navbar-dropdown {
+  border-radius: 5px;
+  border-top: 0;
+  padding: 12px;
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  transform: scale(0.9);
+  min-width: 150px;
+}
+@media (max-width: 1023px) {
+  .navbar-item.has-dropdown .navbar-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+    display: none;
+    box-shadow: 0 10px 35px #efefef;
+  }
+}
+.navbar-item.has-dropdown .navbar-item {
+  position: relative;
+  color: #333;
+  transition: 0.2s ease;
+  font-size: inherit;
+  padding: 10px 13px !important;
+  border-radius: inherit;
+}
+.navbar-item.has-dropdown .navbar-item:hover {
+  color: #Ce0033 !important;
+  background-color: #F9F9F9 !important;
+}
+
+@media screen and (min-width: 1024px) {
+  .navbar-item.is-active  .navbar-item.is-hoverable:focus  .navbar-item.is-hoverable:focus-within .navbar-item.is-hoverable:hover {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+  }
+}
+
+.banner {
+  background-image: url(../images/backgrounds/banner-bg.svg);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  padding: 120px 0 100px;
+}
+.banner .container {
+  position: relative;
+  z-index: 1;
+}
+.banner-shape-1 {
+  position: absolute;
+  left: 20%;
+  top: 25%;
+}
+.banner-shape-1 .path {
+  fill: #Ce0033;
+}
+.banner-shape-2 {
+  position: absolute;
+  right: 20%;
+  top: 25%;
+}
+.banner-shape-2 .path {
+  fill: #Ce0033;
+}
+.banner-shape-3 {
+  position: absolute;
+  right: 25%;
+  bottom: 15%;
+}
+.banner-shape-3 .path {
+  fill: #Ce0033;
+}
+.banner-border {
+  position: absolute;
+  bottom: -60px;
+  left: 0;
+  width: 100%;
+  stroke: #Ce0033;
+} 
+
+.header {
+  /* background-image: url(../images/backgrounds/header-bg.svg); */
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  padding: 120px 0 150px;
+}
+.header .container {
+  position: relative;
+  z-index: 1;
+}
+.header-shape-1 {
+  position: absolute;
+  left: 20%;
+  top: 25%;
+}
+.header-shape-1 .path {
+  fill: #4FD675;
+}
+.header-shape-2 {
+  position: absolute;
+  right: 20%;
+  top: 25%;
+}
+.header-shape-2 .path {
+  fill: #4FD675;
+}
+.header-shape-3 {
+  position: absolute;
+  right: 25%;
+  bottom: 15%;
+}
+.header-shape-3 .path {
+  fill: #4FD675;
+}
+.header-border {
+  position: absolute;
+  bottom: -35px;
+  left: 0;
+  width: 100%;
+  stroke: #4FD675;
+}
+
